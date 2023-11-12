@@ -5,10 +5,12 @@ export function load() {
 
 	const articles = Object.entries(modules).map(([filepath, module]) => {
 		const { frontmatter } = module;
+		const slug = filepath.split('/+page')[0].replace(/^\./, '');
+
 		return {
-			filepath,
 			title: frontmatter.title,
-			description: frontmatter.description
+			description: frontmatter.description,
+			slug
 		};
 	});
 

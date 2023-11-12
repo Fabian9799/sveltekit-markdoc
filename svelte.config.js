@@ -12,16 +12,19 @@ function absoulute(path) {
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: [vitePreprocess({}), markdoc({
-		generateSchema: true,
-		nodes: absoulute('./src/markdoc/nodes/_Module.svelte'),
-		tags: absoulute('./src/markdoc/tags/_Module.svelte'),
-		partials: absoulute('./src/markdoc/partials'),
-		layouts: {
-			default: absoulute('./src/markdoc/layouts/Article.svelte'),
-			author: absoulute('./src/markdoc/layouts/Author.svelte'),
-		}
-	})],
+	preprocess: [
+		vitePreprocess({}),
+		markdoc({
+			generateSchema: true,
+			nodes: absoulute('./src/markdoc/nodes/_Module.svelte'),
+			tags: absoulute('./src/markdoc/tags/_Module.svelte'),
+			partials: absoulute('./src/lib/partials'),
+			layouts: {
+				default: absoulute('./src/markdoc/layouts/Article.svelte'),
+				author: absoulute('./src/markdoc/layouts/Author.svelte')
+			}
+		})
+	],
 	extensions: ['.markdoc', '.svelte'],
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
@@ -29,7 +32,7 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			"$post": "./posts"
+			$post: './posts'
 		}
 	}
 };

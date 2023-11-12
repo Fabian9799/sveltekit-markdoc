@@ -1,8 +1,9 @@
 ---
-title: First article
+title: Second article
 description: Some description
+layout: author
 ---
 
-# First Article
+# Second Article
 
 Welcome!

@@ -1,3 +1,9 @@
-<nav>This is an article</nav>
+<script>
+	export let title = '';
+	export let description = '';
+</script>
 
-<slot />
+<nav>This is an article</nav>
+<div class="prose p-4">
+	<slot />
+</div>

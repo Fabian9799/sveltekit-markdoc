@@ -3,4 +3,6 @@
 	export let b: number;
 </script>
 
-<p>{a} * {b} = {a * b}</p>
+<div class="border">
+	<p>{a} * {b} = {a * b}</p>
+</div>
