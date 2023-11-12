@@ -1,6 +1,10 @@
 # A simple Sveltekit blog with markdoc
 
-A _very_ basic blog example with SvelteKit, Markdoc and Tailwind
+A _very_ basic blog example with SvelteKit, Markdoc and
+
+## Demo
+
+[![Open in SvelteLab](https://docs.sveltelab.dev/button/light_short.svg)](https://sveltelab.dev/github.com/Fabian9799/sveltekit-markdoc)
 
 ## Made with
 
