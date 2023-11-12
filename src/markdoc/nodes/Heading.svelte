@@ -1,6 +1,6 @@
 <!-- ./src/lib/Heading.svelte -->
 <script lang="ts">
-	export let level: 'h1' | 'h2';
+	export let level: string;
 </script>
 
 <svelte:element this={`h${level}`}><slot /></svelte:element>
