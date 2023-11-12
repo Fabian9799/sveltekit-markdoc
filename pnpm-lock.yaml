@@ -56,6 +56,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.4.3
     version: 3.6.0(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.3)
+  svelte-markdoc-preprocess:
+    specifier: ^1.1.3
+    version: 1.1.3
   tailwindcss:
     specifier: ^3.3.5
     version: 3.3.5
@@ -1315,6 +1318,10 @@ packages:
       function-bind: 1.1.2
     dev: true
 
+  /html-escaper@3.0.3:
+    resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
+    dev: true
+
   /ignore@5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
@@ -1462,6 +1469,10 @@ packages:
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: true
+
+  /lovely-logs@1.2.2:
+    resolution: {integrity: sha512-dPvYcBok38QvXC+X8/v2BZJDA/iZfCfkRXAwp+s9rvBxY+ZWkMuhNNxukQVIUVMNutIonKpN140Vfv6LCli/wQ==}
     dev: true
 
   /lru-cache@6.0.0:
@@ -2030,6 +2041,20 @@ packages:
       svelte: ^3.19.0 || ^4.0.0
     dependencies:
       svelte: 4.2.3
+    dev: true
+
+  /svelte-markdoc-preprocess@1.1.3:
+    resolution: {integrity: sha512-1stOZ8VShNv0sUY4ZHL+u9OPeOvLTZ8FApLM+3FBZlJ6F7bs6miWIYX/9EqhAa6qmE8qHauwbAYQwZeIUPvQqQ==}
+    dependencies:
+      '@markdoc/markdoc': 0.3.5
+      html-escaper: 3.0.3
+      js-yaml: 4.1.0
+      lovely-logs: 1.2.2
+      svelte: 4.2.3
+      typescript: 5.2.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
     dev: true
 
   /svelte-preprocess@5.1.0(postcss-load-config@4.0.1)(postcss@8.4.31)(svelte@4.2.3)(typescript@5.2.2):
