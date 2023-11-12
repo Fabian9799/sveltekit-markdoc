@@ -1,9 +1,15 @@
-<script>
-	export let doc = '';
-	export let config = {};
+<script lang="ts">
+	import Markdoc, {
+		Tag,
+		type Config,
+		type ConfigType,
+		type RenderableTreeNode
+	} from '@markdoc/markdoc';
+
+	export let doc: string = '';
+	export let config: Config = {};
 	export let components = new Map();
 
-	import Markdoc from '@markdoc/markdoc';
 	import Tags from './Tags.svelte';
 	import { add_frontmatter } from './frontmatter';
 
