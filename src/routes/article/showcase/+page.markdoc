@@ -11,6 +11,6 @@ Want to include your own svelte components? Now you can!
 {% multiply a=2 b=3 /%}
 
 ## Partials
-Partials!!!
+You can also embed external markdown files.
 
-{% partial  file="header.md" /%}
+{% partial file="header.markdoc" variables={"name": "John"} /%}
