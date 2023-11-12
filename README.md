@@ -9,7 +9,7 @@ A _very_ basic blog example with SvelteKit, Markdoc and Tailwind
 
 ## Features
 
-- Layouts (different layout for different pages)
+- Layouts (different layouts for different pages)
 - Custom node styling (h1, img, etc.)
 - Tags (embed custom svelte components)
 - Partials (reuse content across documents)
