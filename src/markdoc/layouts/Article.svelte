@@ -14,14 +14,19 @@
 	});
 </script>
 
-<nav>This is an article</nav>
-<p>Title: {title}</p>
-<p>Description: {description}</p>
+<main>
+	<article class="max-w-2xl mx-auto">
+		<header class="my-4">
+			<h1 class="text-5xl font-bold">{title}</h1>
+			<p>{description}</p>
+		</header>
 
-<div class="border border-sky-500" bind:this={toc}>
-	<p class="font-bold">Table of contents</p>
-</div>
+		<div class="border rounded-md shadow p-4" bind:this={toc}>
+			<p class="font-bold">Table of contents</p>
+		</div>
 
-<div class="prose p-4" bind:this={article}>
-	<slot />
-</div>
+		<div class="prose p-4 prose-zinc" bind:this={article}>
+			<slot />
+		</div>
+	</article>
+</main>

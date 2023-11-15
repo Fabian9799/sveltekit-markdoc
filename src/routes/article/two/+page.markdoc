@@ -1,9 +1,9 @@
 ---
-title: Second article
-description: Some description
+title: Author One
+description: Hello I'm Author number one, I'm the best
 layout: author
 ---
 
-# Second Article
+# Some Author page
 
-Welcome!
+Hello, I use a different layout.

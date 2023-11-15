@@ -1,3 +1,32 @@
-<nav>This is an author page</nav>
+<script lang="ts">
+	export let title = '';
+	export let description = '';
+</script>
 
-<slot />
+<main class="max-w-2xl mx-auto">
+	<header class="my-4 border p-4 rounded-md shadow">
+		<div class="flex gap-2">
+			<svg
+				class="h-10 my-auto text-zinc-700"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><path d="M18 20a6 6 0 0 0-12 0" /><circle cx="12" cy="10" r="4" /><circle
+					cx="12"
+					cy="12"
+					r="10"
+				/></svg
+			>
+			<h1 class="text-5xl font-bold">{title}</h1>
+		</div>
+		<p class="text-xl">{description}</p>
+	</header>
+
+	<div class="prose p-4 prose-zinc">
+		<slot />
+	</div>
+</main>
