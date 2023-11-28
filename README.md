@@ -1,6 +1,6 @@
 # A simple Sveltekit blog with markdoc
 
-A _very_ basic blog example with SvelteKit, Markdoc and
+A _very_ basic blog example with SvelteKit, Markdoc and Tailwind
 
 ## Demo
 
