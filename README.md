@@ -2,10 +2,6 @@
 
 A _very_ basic blog example with SvelteKit, Markdoc and Tailwind
 
-## Demo
-
-[![Open in SvelteLab](https://docs.sveltelab.dev/button/light_short.svg)](https://sveltelab.dev/github.com/Fabian9799/sveltekit-markdoc)
-
 ## Made with
 
 - Styling with [Tailwind](https://tailwindcss.com/) and [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
