@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@layer base {
+	body {
+		@apply text-zinc-900;
+	}
+}

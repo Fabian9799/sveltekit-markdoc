@@ -2,13 +2,19 @@
 	import { generateTableOfContents } from '$lib/toc';
 	import { onMount } from 'svelte';
 
-	export let title = '';
-	export let description = '';
+	interface Props {
+		title?: string;
+		description?: string;
+		children?: import('svelte').Snippet;
+	}
 
-	let article: HTMLDivElement;
-	let toc: HTMLDivElement;
+	let { title = '', description = '', children }: Props = $props();
+
+	let article: HTMLDivElement | undefined = $state();
+	let toc: HTMLDivElement | undefined = $state();
 
 	onMount(() => {
+		if (!article || !toc) return;
 		const tocElements = generateTableOfContents(article);
 		toc.appendChild(tocElements);
 	});
@@ -36,12 +42,12 @@
 			<p>{description}</p>
 		</header>
 
-		<div class="border rounded-md shadow p-4" bind:this={toc}>
+		<div class="ring ring-zinc-200 rounded-md shadow p-4" bind:this={toc}>
 			<p class="font-bold">Table of contents</p>
 		</div>
 
 		<div class="prose p-4 prose-zinc" bind:this={article}>
-			<slot />
+			{@render children?.()}
 		</div>
 	</article>
 </main>

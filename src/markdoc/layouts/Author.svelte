@@ -1,10 +1,15 @@
 <script lang="ts">
-	export let title = '';
-	export let description = '';
+	interface Props {
+		title?: string;
+		description?: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let { title = '', description = '', children }: Props = $props();
 </script>
 
 <main class="max-w-2xl mx-auto">
-	<header class="my-4 border p-4 rounded-md shadow">
+	<header class="my-4 border border-zinc-200 p-4 rounded-md shadow">
 		<a class="flex gap-1 w-fit" href="/"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +47,6 @@
 	</header>
 
 	<div class="prose p-4 prose-zinc">
-		<slot />
+		{@render children?.()}
 	</div>
 </main>

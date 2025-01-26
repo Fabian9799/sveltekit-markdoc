@@ -8,7 +8,7 @@ description: Showcase of markdocs features
 ## Tags
 Want to include your own svelte components? Now you can!
 
-{% multiply a=2 b=3 /%}
+{% multiply /%}
 
 ## Partials
 You can also embed external markdown files.

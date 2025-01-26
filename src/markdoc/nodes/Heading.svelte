@@ -1,6 +1,11 @@
 <!-- ./src/lib/Heading.svelte -->
 <script lang="ts">
-	export let level: string;
+	interface Props {
+		level: string;
+		children?: import('svelte').Snippet;
+	}
+
+	let { level, children }: Props = $props();
 </script>
 
-<svelte:element this={`h${level}`}><slot /></svelte:element>
+<svelte:element this={`h${level}`}>{@render children?.()}</svelte:element>

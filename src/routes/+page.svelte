@@ -1,7 +1,5 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-
-	export let data: PageData;
+	let { data } = $props();
 </script>
 
 <main class="p-8 max-w-2xl mx-auto">
@@ -10,7 +8,7 @@
 		{#each data.articles as { slug, description, title }}
 			<li>
 				<a href={slug} class="group">
-					<article class="border p-4 rounded-md shadow hover:ring ring-zinc-300/30">
+					<article class="p-4 rounded-md shadow ring ring-zinc-200 hover:ring-zinc-400">
 						<h2 class="font-semibold">{title}</h2>
 						<p>{description}</p>
 					</article>
