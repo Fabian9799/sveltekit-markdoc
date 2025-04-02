@@ -42,9 +42,25 @@
 			<p>{description}</p>
 		</header>
 
-		<div class="ring ring-zinc-200 rounded-md shadow p-4" bind:this={toc}>
-			<p class="font-bold">Table of contents</p>
-		</div>
+		<details class=" open:ring ring-zinc-200 rounded-xl group">
+			<summary
+				class="cursor-pointer list-none text-lg font-semibold px-2 py-2 rounded-xl group-open:rounded-b-none group-open:bg-zinc-200 duration-200 flex gap-1"
+			>
+				<svg
+					class="w-4 ml-2 transition-transform group-open:rotate-90 fill-current"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 256 256"
+					><rect width="256" height="256" fill="none" /><path
+						d="M181.66,122.34l-80-80A8,8,0,0,0,88,48V208a8,8,0,0,0,13.66,5.66l80-80A8,8,0,0,0,181.66,122.34Z"
+					/></svg
+				>
+
+				Table of Contents
+			</summary>
+			<div class="text-grey-200 px-2 py-4 toc">
+				<div bind:this={toc}></div>
+			</div>
+		</details>
 
 		<div class="prose p-4 prose-zinc" bind:this={article}>
 			{@render children?.()}
