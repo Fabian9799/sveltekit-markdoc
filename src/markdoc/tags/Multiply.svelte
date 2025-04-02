@@ -1,3 +1,7 @@
+<script lang="ts">
+	let { a, b } = $props();
+</script>
+
 <div class="border">
-	<p>This is a custom component</p>
+	<p>{a} * {b} = {a * b}</p>
 </div>

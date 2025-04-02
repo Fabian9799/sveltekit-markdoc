@@ -6,11 +6,13 @@ description: Showcase of markdocs features
 # Hello!
 
 ## Tags
+
 Want to include your own svelte components? Now you can!
 
-{% multiply /%}
+{% multiply a=2 b=5 /%}
 
 ## Partials
+
 You can also embed external markdown files.
 
 {% partial file="header.markdoc" variables={"name": "John"} /%}
