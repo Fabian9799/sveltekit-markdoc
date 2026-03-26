@@ -20,6 +20,11 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+</svelte:head>
+
 <main>
 	<article class="max-w-2xl mx-auto">
 		<header class="my-4">

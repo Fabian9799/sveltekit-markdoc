@@ -8,6 +8,11 @@
 	let { title = '', description = '', children }: Props = $props();
 </script>
 
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+</svelte:head>
+
 <main class="max-w-2xl mx-auto">
 	<header class="my-4 border border-zinc-200 p-4 rounded-md shadow">
 		<a class="flex gap-1 w-fit" href="/"

@@ -2,6 +2,10 @@
 	let { data } = $props();
 </script>
 
+<svelte:head>
+	<title>Articles</title>
+</svelte:head>
+
 <main class="p-8 max-w-2xl mx-auto">
 	<p class="text-3xl font-bold mb-4">Articles</p>
 	<ul class=" grid grid-cols-2 flex-wrap gap-2">
